@@ -19,53 +19,90 @@ body{
     min-height:100vh;
 }
 
-/* =========================
-   RESPONSIVE MOBILE
-========================= */
-@media (max-width: 768px) {
+header{
+    text-align:center;
+    padding:40px 20px;
+}
 
-    header {
-        padding: 20px 10px;
-    }
+header h1{
+    font-size:3rem;
+    color:#FFD700;
+    margin-bottom:10px;
+}
 
-    header h1 {
-        font-size: 1.6rem;
-    }
+header p{
+    color:#ddd;
+}
 
-    header p {
-        font-size: 0.9rem;
-    }
+.container{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    padding-bottom:40px;
+}
 
-    .groups {
-        grid-template-columns: 1fr; /* jadi 1 kolom di HP */
-        gap: 15px;
-    }
+.groups{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
 
-    .group-title {
-        font-size: 1rem;
-        padding: 10px;
-    }
+.group-card{
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
 
-    th, td {
-        padding: 8px;
-        font-size: 0.85rem;
-    }
+.group-card:hover{
+    transform:translateY(-5px);
+}
 
-    .pos {
-        width: 40px;
-    }
+.group-title{
+    background:#FFD700;
+    color:#001f3f;
+    text-align:center;
+    font-size:1.3rem;
+    font-weight:bold;
+    padding:15px;
+}
 
-    footer {
-        font-size: 0.8rem;
-        padding: 20px;
-    }
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-    /* bikin tabel tidak pecah */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
+th{
+    background:rgba(255,255,255,0.15);
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+.pos{
+    width:60px;
+    text-align:center;
+    font-weight:bold;
+    color:#FFD700;
+}
+
+.team{
+    padding-left:10px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#bbb;
 }
 </style>
 </head>
